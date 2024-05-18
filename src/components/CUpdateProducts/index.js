@@ -240,7 +240,6 @@ const handleClose = closePopup => {
   )
 
   const apiStatusViews=()=>{
-    console.log(apiStatus)
     switch(apiStatus){
         case apiStatusCalls.initial:
             return AddProductFormView()

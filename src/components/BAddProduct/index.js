@@ -3,8 +3,7 @@ import { Rings } from 'react-loader-spinner';
 import Popup from 'reactjs-popup';
 import ProductAddAnimation from "./ProductAddAnimation.json"
 import Lottie from 'lottie-react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAdd, faDashboard } from '@fortawesome/free-solid-svg-icons';
+
 
 const apiStatusCalls = {initial:"INITIAL",success:"SUCCESS",failure:"FAILURE",loader:"LOADER"}
 const BAddProduct = () => {
@@ -83,7 +82,7 @@ const BAddProduct = () => {
       if(fetchServerData.ok){
         const JsonFormatData = await fetchServerData.json()
         setApiStatus(apiStatusCalls.success)
-        console.log(JsonFormatData)
+    
       }
       else{
         setApiStatus(apiStatusCalls.failure)
@@ -250,7 +249,6 @@ const BAddProduct = () => {
   )
 
   const apiStatusViews=()=>{
-    console.log(apiStatus)
     switch(apiStatus){
         case apiStatusCalls.initial:
             return AddProductFormView()
@@ -259,7 +257,7 @@ const BAddProduct = () => {
                 case apiStatusCalls.failure:
                     return FailureView()
                     case apiStatusCalls.loader:
-                      return loadingView()
+                      return lodingView()
                     default :
                     return null
     }

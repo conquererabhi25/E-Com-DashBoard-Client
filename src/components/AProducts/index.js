@@ -21,7 +21,6 @@ const Products =()=>{
 
     const fetchAppProducts =async()=>{
         const token = JSON.parse(localStorage.getItem("token"))
-        console.log(token)
         const options = {
             headers:{
                 authorization:`bearer ${JSON.parse(localStorage.getItem('token'))}`

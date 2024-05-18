@@ -1,4 +1,4 @@
-import { faDoorOpen, faSignOut } from "@fortawesome/free-solid-svg-icons";
+import {faSignOut } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React ,{useEffect,useState}from "react"
 import {Link,useNavigate} from "react-router-dom"
@@ -20,7 +20,7 @@ const NavBar =()=>{
         const userinfo =localStorage.getItem("userDetails")
         if(userinfo != null){
             setUserName(JSON.parse(userinfo).userdata.name)
-            console.log(JSON.parse(userinfo).userdata.name)
+            // console.log(JSON.parse(userinfo).userdata.name)
         }
        
     })
